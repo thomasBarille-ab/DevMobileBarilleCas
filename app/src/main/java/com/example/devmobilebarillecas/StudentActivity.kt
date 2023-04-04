@@ -1,6 +1,7 @@
 package com.example.devmobilebarillecas
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,6 +15,8 @@ class StudentActivity : AppCompatActivity() {
         val studentName = intent.getStringExtra("student_name")
         val studentEmail = intent.getStringExtra("student_email")
         val studentGroup = intent.getStringExtra("student_group")
+        val studentAvatar = findViewById<ImageView>(R.id.avatar_student)
+
 
         when (intent.getStringExtra("student_name")) {
             "BARILLE Thomas" -> {
@@ -26,6 +29,7 @@ class StudentActivity : AppCompatActivity() {
                 nameTextView.text = studentName
                 emailTextView.text = studentEmail
                 groupTextView.text = studentGroup
+                studentAvatar.setImageResource(R.drawable.avatar_thomas)
             }
             "CAS Marc-Olivier" -> {
                 val infosTextView = findViewById<TextView>(R.id.student_infos_textview)
@@ -37,6 +41,7 @@ class StudentActivity : AppCompatActivity() {
                 nameTextView.text = studentName
                 emailTextView.text = studentEmail
                 groupTextView.text = studentGroup
+                studentAvatar.setImageResource(R.drawable.avatar_marco)
             }
         }
     }
