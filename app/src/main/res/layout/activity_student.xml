@@ -1,6 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/avatar_thomas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avatar_thomas"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/name_thomas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Barille Thomas"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/infos_thomas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Je suis étudiant à l'epsi en 3ème année, je suis un grand fan des Clippers"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/email_thomas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Email : thomas.barille@espi.fr"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/student_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Groupe : B3-Dev 1 spé IA"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onEpsiLinkClicked">
+
+        <TextView
+            android:id="@+id/epsi_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="http://www.epsi.fr/"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:linksClickable="true"/>
+    </LinearLayout>
+
+</LinearLayout>
