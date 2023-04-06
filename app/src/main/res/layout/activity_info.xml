@@ -4,9 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include
-            layout="@layout/header_layout"/>
-
     <ImageView
         android:id="@+id/harvard_background"
         android:layout_width="match_parent"
@@ -14,6 +11,10 @@
         android:src="@drawable/harvard_background"
         android:scaleType="fitXY"
         android:adjustViewBounds="true" />
+
+    <include
+        layout="@layout/header_layout"
+        android:layout_alignParentTop="true"/>
 
     <Button
         android:id="@+id/buttonBarilleThomas"
