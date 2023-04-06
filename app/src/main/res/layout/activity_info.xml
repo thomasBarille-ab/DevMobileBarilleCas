@@ -13,8 +13,7 @@
         android:adjustViewBounds="true" />
 
     <include
-        layout="@layout/header_layout"
-        android:layout_alignParentTop="true"/>
+        layout="@layout/header_layout"/>
 
     <Button
         android:id="@+id/buttonBarilleThomas"
