@@ -7,6 +7,14 @@
         layout="@layout/header_layout"/>
 
     <ImageView
+        android:id="@+id/student_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/default_na_background"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+    <ImageView
         android:id="@+id/avatar_student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -7,7 +7,7 @@
         android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/usa_background"
+        android:src="@drawable/default_na_background"
         android:scaleType="fitXY"
         android:adjustViewBounds="true" />
 

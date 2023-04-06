@@ -22,6 +22,7 @@ class StudentActivity : AppCompatActivity() {
         val studentEmail = intent.getStringExtra("student_email")
         val studentGroup = intent.getStringExtra("student_group")
         val studentAvatar = findViewById<ImageView>(R.id.avatar_student)
+        val studentBackground = findViewById<ImageView>(R.id.student_background)
 
 
         when (intent.getStringExtra("student_name")) {
@@ -36,6 +37,7 @@ class StudentActivity : AppCompatActivity() {
                 emailTextView.text = studentEmail
                 groupTextView.text = studentGroup
                 studentAvatar.setImageResource(R.drawable.avatar_thomas)
+                studentBackground.setImageResource(R.drawable.los_angeles_background)
             }
             "CAS Marc-Olivier" -> {
                 val infosTextView = findViewById<TextView>(R.id.student_infos_textview)
@@ -48,6 +50,7 @@ class StudentActivity : AppCompatActivity() {
                 emailTextView.text = studentEmail
                 groupTextView.text = studentGroup
                 studentAvatar.setImageResource(R.drawable.avatar_marco)
+                studentBackground.setImageResource(R.drawable.milwaukee_background)
             }
         }
     }
