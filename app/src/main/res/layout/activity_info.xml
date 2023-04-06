@@ -4,6 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include
+            layout="@layout/header_layout"/>
+
     <Button
         android:id="@+id/buttonBarilleThomas"
         android:layout_width="match_parent"

@@ -3,6 +3,7 @@ package com.example.devmobilebarillecas
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 class InfoActivity : AppCompatActivity() {
@@ -10,6 +11,11 @@ class InfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
+
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            finish()
+        }
 
         val buttonBarilleThomas = findViewById<Button>(R.id.buttonBarilleThomas)
         val buttonCasMarcOlivier = findViewById<Button>(R.id.buttonCasMarcOlivier)
