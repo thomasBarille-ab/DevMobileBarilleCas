@@ -4,6 +4,14 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/usa_background"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+    <ImageView
         android:id="@+id/splash_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,17 +21,16 @@
 
     <Button
         android:id="@+id/buttonInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:text="Info"/>
 
     <Button
         android:id="@+id/buttonProducts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:layout_below="@id/buttonInfo"
         android:layout_centerHorizontal="true"
         android:text="Produits"/>
