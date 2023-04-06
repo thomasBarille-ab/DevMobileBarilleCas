@@ -23,7 +23,7 @@ class InfoActivity : AppCompatActivity() {
         buttonBarilleThomas.setOnClickListener {
             val intent = Intent(this, StudentActivity::class.java)
             intent.putExtra("student_name", "BARILLE Thomas")
-            intent.putExtra("student_infos", "Je suis étudiant à l'epsi en 3ème année, je suis un grand fan des Clippers")
+            intent.putExtra("student_infos", "Je suis étudiant à l'epsi en 3ème année,\n  je suis un grand fan des Clippers")
             intent.putExtra("student_email", "thomas.barille@espi.fr")
             intent.putExtra("student_group", "Groupe : B3-Dev 1 spé IA")
             startActivity(intent)
@@ -32,7 +32,7 @@ class InfoActivity : AppCompatActivity() {
         buttonCasMarcOlivier.setOnClickListener {
             val intent = Intent(this, StudentActivity::class.java)
             intent.putExtra("student_name", "CAS Marc-Olivier")
-            intent.putExtra("student_infos", "Je suis étudiant à l'epsi en 3ème année, je suis un grand fan des Bucks")
+            intent.putExtra("student_infos", "Je suis étudiant à l'epsi en 3ème année,\n  je suis un grand fan des Bucks")
             intent.putExtra("student_email", "marcolivier.cas@espi.fr")
             intent.putExtra("student_group", "Groupe : B3-Dev 1 spé IA")
             startActivity(intent)
