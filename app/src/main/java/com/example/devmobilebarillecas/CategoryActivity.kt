@@ -3,6 +3,7 @@ package com.example.devmobilebarillecas
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -26,12 +27,15 @@ class CategoryActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             finish()
         }
+        categoriesRecyclerView = findViewById(R.id.categoriesRecyclerView)
+        categoriesRecyclerView.layoutManager = LinearLayoutManager(this)
+        fetchData()
     }
 
     private fun fetchData() {
         val client = OkHttpClient()
         val request = Request.Builder()
-            .url("https://www.ugarit.online/epsi/categories.json%22")
+            .url("https://www.ugarit.online/epsi/categories.json")
             .build()
 
         println("data")
