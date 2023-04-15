@@ -6,10 +6,11 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
     private lateinit var splashImage: ImageView
     private lateinit var buttonInfo: Button
@@ -43,7 +44,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         buttonProducts.setOnClickListener {
-            Toast.makeText(this, "Clic sur le bouton produits", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, CategoryActivity::class.java)
+            startActivity(intent)        }
         }
-    }
+
+
 }
