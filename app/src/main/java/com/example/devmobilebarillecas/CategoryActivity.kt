@@ -23,7 +23,7 @@ data class CategoryItem(
     val products_url: String
 )
 
-class CategoryActivity : AppCompatActivity() {
+class CategoryActivity : BaseActivity() {
     private lateinit var categoriesRecyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,18 +31,6 @@ class CategoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_category)
         println("toto")
 
-        fun setHeaderTitle( title:String?){
-            val textViewTitle= findViewById<TextView>(R.id.textViewTitle)
-            textViewTitle.setText(title)
-        }
-
-        fun showBack(){
-            val imageViewBack=findViewById<ImageView>(R.id.imageViewBack)
-            imageViewBack.visibility= View.VISIBLE
-            imageViewBack.setOnClickListener(View.OnClickListener {
-                finish()
-            })
-        }
 
         categoriesRecyclerView = findViewById(R.id.categoriesRecyclerView)
         categoriesRecyclerView.layoutManager = LinearLayoutManager(this)

@@ -24,25 +24,12 @@ data class ProductItem(
 )
 
 
-class ProductsActivity : AppCompatActivity() {
+class ProductsActivity : BaseActivity() {
 
     private lateinit var productsRecyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products)
-
-        fun setHeaderTitle( title:String?){
-            val textViewTitle= findViewById<TextView>(R.id.textViewTitle)
-            textViewTitle.setText(title)
-        }
-
-        fun showBack(){
-            val imageViewBack=findViewById<ImageView>(R.id.imageViewBack)
-            imageViewBack.visibility= View.VISIBLE
-            imageViewBack.setOnClickListener(View.OnClickListener {
-                finish()
-            })
-        }
 
         val title = intent.extras?.getString("title")
         val url = intent.extras?.getString("products_url").toString()
