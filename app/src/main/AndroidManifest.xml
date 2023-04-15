@@ -11,21 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DevMobileBarilleCas"
         tools:targetApi="31">
-        <activity
-            android:name=".ProductsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProductView"
-            android:exported="false" />
-        <activity
-            android:name=".ProductAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".CategoryAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".CategoryActivity"
-            android:exported="false" />
+        <activity android:name=".ProductsActivity" />
+        <activity android:name=".ProductView" />
+        <activity android:name=".ProductAdapter" />
+        <activity android:name=".CategoryAdapter" />
+        <activity android:name=".CategoryActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
