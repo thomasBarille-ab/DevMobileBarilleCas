@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         buttonProducts.setOnClickListener {
-            Toast.makeText(this, "Clic sur le bouton produits", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, CategoryActivity::class.java)
+            startActivity(intent)
         }
     }
 }
