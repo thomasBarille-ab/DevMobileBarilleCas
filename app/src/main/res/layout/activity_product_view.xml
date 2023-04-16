@@ -10,9 +10,7 @@
         android:orientation="vertical">
 
         <include
-            layout="@layout/header_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            layout="@layout/header_layout" />
 
         <Space
             android:layout_width="match_parent"
@@ -30,7 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            tools:text="This is the product description. It should be displayed below the product image and should scroll if it is too long for the screen." />
+            android:textColor=" #FFFFFF"
+            tools:text="This is the product description." />
 
     </LinearLayout>
 

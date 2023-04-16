@@ -2,6 +2,7 @@ package com.example.devmobilebarillecas
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -29,17 +30,19 @@ class CategoryActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
-        println("toto")
 
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            finish()
+        }
 
         categoriesRecyclerView = findViewById(R.id.categoriesRecyclerView)
         categoriesRecyclerView.layoutManager = LinearLayoutManager(this)
 
         setHeaderTitle("Rayons")
-        showBack()
         fetchData()
 
-        println("fetch")
+
     }
 
     private fun fetchData() {
@@ -47,8 +50,6 @@ class CategoryActivity : BaseActivity() {
         val request = Request.Builder()
             .url("https://www.ugarit.online/epsi/categories.json")
             .build()
-
-        println("data")
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {

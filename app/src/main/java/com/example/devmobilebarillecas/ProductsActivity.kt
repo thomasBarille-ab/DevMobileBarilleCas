@@ -2,6 +2,7 @@ package com.example.devmobilebarillecas
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -31,13 +32,17 @@ class ProductsActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products)
 
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            finish()
+        }
+
         val title = intent.extras?.getString("title")
         val url = intent.extras?.getString("products_url").toString()
 
         productsRecyclerView = findViewById(R.id.productsRecyclerView)
         productsRecyclerView.layoutManager = LinearLayoutManager(this)
 
-        showBack()
         setHeaderTitle(title)
         fetchData(url)
     }

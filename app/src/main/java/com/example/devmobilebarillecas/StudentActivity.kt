@@ -6,7 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class StudentActivity : AppCompatActivity() {
+class StudentActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +17,9 @@ class StudentActivity : AppCompatActivity() {
             finish()
         }
 
+
+
+
         val studentInfos = intent.getStringExtra("student_infos")
         val studentName = intent.getStringExtra("student_name")
         val studentEmail = intent.getStringExtra("student_email")
@@ -24,6 +27,7 @@ class StudentActivity : AppCompatActivity() {
         val studentAvatar = findViewById<ImageView>(R.id.avatar_student)
         val studentBackground = findViewById<ImageView>(R.id.student_background)
 
+        setHeaderTitle(studentName)
 
         when (intent.getStringExtra("student_name")) {
             "BARILLE Thomas" -> {

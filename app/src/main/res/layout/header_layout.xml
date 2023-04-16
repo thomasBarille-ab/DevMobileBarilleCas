@@ -7,14 +7,16 @@
 
     <ImageButton
         android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@drawable/back_arrow"
+        android:layout_width="71dp"
+        android:layout_height="51dp"
         android:scaleType="centerInside"
+        android:src="@drawable/back_arrow"
         android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="Back icon"/>
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -26,16 +28,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteX="-26dp"
         tools:layout_editor_absoluteY="0dp" />
-
-    <ImageView
-        android:id="@+id/imageViewBack"
-        android:visibility="gone"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/back_arrow"
-        android:contentDescription="Back icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
